@@ -1,0 +1,17 @@
+/debug.log
+screenshots/
+output/
+/libspecs/
+*.pyc
+report.html
+output.xml
+log.html
+selenium-screenshot-*.png
+screenshot_*.png
+.pydevproject
+.idea
+.project
+red.xml
+.settings
+.project
+.projects
