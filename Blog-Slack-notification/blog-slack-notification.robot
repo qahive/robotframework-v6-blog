@@ -1,11 +1,11 @@
 *** Test Cases ***
-demo pass script
+Login with valid username and password
     Log    demo pass script
 
-demo fail script 1
+Login with google authen
     Log    demo fail script
     Fail    Force fail for demo
 
-demo pass script 2
+Login with facebook authen
     Log    demo pass script
     
