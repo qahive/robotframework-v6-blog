@@ -1,2 +1,3 @@
 robotframework==6.0.1
 robotframework-seleniumlibrary==4.3.0
+robotframework-requests==0.9.4
