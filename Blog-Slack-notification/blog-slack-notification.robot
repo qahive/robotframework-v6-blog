@@ -8,4 +8,3 @@ Login with google authen
 
 Login with facebook authen
     Log    demo pass script
-    
