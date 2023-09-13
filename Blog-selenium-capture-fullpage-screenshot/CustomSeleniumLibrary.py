@@ -41,12 +41,12 @@ class CustomSeleniumLibrary():
         rectangles = []
 
         # Get the pixel ratio (Retina display ratio)
-        pixel_ratio = driver.execute_script("return window.devicePixelRatio")
+        pixel_ratio = int(driver.execute_script("return window.devicePixelRatio"))
 
-        total_width = driver.execute_script("return document.body.scrollWidth") * pixel_ratio
-        total_height = driver.execute_script("return document.body.parentNode.scrollHeight") * pixel_ratio
-        viewport_width = driver.execute_script("return document.body.clientWidth") * pixel_ratio
-        viewport_height = driver.execute_script("return window.innerHeight") * pixel_ratio
+        total_width = int(driver.execute_script("return document.body.scrollWidth") * pixel_ratio) + 1
+        total_height = int(driver.execute_script("return document.body.parentNode.scrollHeight") * pixel_ratio) + 1
+        viewport_width = int(driver.execute_script("return document.body.clientWidth") * pixel_ratio)
+        viewport_height = int(driver.execute_script("return window.innerHeight") * pixel_ratio)
 
         i = 0
         while i < total_height:
@@ -70,7 +70,7 @@ class CustomSeleniumLibrary():
 
         for rectangle in rectangles:
             if not previous is None:
-                driver.execute_script("window.scrollTo({0}, {1})".format(rectangle[0], rectangle[1]))
+                driver.execute_script("window.scrollTo({0}, {1})".format(int(rectangle[0]), int(rectangle[1])))
                 time.sleep(0.2)
 
             file_name = "part_{0}.png".format(part)
