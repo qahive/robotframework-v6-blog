@@ -41,7 +41,7 @@ class CustomSeleniumLibrary():
         rectangles = []
 
         # Get the pixel ratio (Retina display ratio)
-        pixel_ratio = int(driver.execute_script("return window.devicePixelRatio"))
+        pixel_ratio = driver.execute_script("return window.devicePixelRatio")
 
         total_width = int(driver.execute_script("return document.body.scrollWidth") * pixel_ratio) + 1
         total_height = int(driver.execute_script("return document.body.parentNode.scrollHeight") * pixel_ratio) + 1
